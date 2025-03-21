@@ -6,10 +6,10 @@ metadata:
     app: {{ .Values.appName }}
 spec:
   ports:
-  - port: 80
+  - port: 3000
     protocol: TCP
-    name: flask
+    name: node
   selector:
     app: {{ .Values.appName }}
-    tier: frontend
+    tier: backend
   type: NodePort

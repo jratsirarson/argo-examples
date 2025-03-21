@@ -9,25 +9,20 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.appName }}
-      tier: frontend
+      tier: backend
   template:
     metadata:
       labels:
         app: {{ .Values.appName }}
-        tier: frontend
+        tier: backend
     spec: # Pod spec
       containers:
-      - name: mycontainer
+      - name: {{ .Values.containerName }}
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
-        - containerPort: 80
+        - containerPort: {{ .Values.port }}
         envFrom:
         - configMapRef:
             name: {{ .Values.configmap.name }}
-        resources:
-          requests:
-            memory: "16Mi" 
-            cpu: "50m"    # 500milliCPUs (1/2 CPU)
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
+      imagePullSecrets:
+      - name: registryando

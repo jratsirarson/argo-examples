@@ -1,12 +1,12 @@
-appName: myhelmapp
+appName: ebanking-customer
 
 port: 80
 
 configmap:
-  name: myhelmapp-configmap-v1
+  name: customer-configmap-v1
   data:
-    CUSTOM_HEADER: 'This app was deployed with helm!'
+    NODE_ENV: 'staging'
 
 image:
-  name: devopsjourney1/mywebapp
-  tag: latest
+  name: andobaobab/ebanking-customer
+  tag: v1
