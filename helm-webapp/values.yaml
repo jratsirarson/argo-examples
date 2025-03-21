@@ -1,7 +1,5 @@
 appName: ebanking-customer
 
-port: 80
-
 configmap:
   name: customer-configmap-v1
   data:

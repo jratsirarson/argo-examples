@@ -17,10 +17,10 @@ spec:
         tier: backend
     spec: # Pod spec
       containers:
-      - name: {{ .Values.containerName }}
+      - name: ebanking-customer
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
-        - containerPort: {{ .Values.port }}
+        - containerPort: 3000
         envFrom:
         - configMapRef:
             name: {{ .Values.configmap.name }}
