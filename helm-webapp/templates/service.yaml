@@ -6,9 +6,9 @@ metadata:
     app: {{ .Values.appName }}
 spec:
   ports:
-  - port: 3000
+  - port: 8500
     protocol: TCP
-    name: node
+    name: registry
   selector:
     app: {{ .Values.appName }}
     tier: backend

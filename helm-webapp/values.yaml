@@ -1,10 +1,7 @@
-appName: ebanking-customer
+appName: registry
 
-configmap:
-  name: customer-configmap-v2
-  data:
-    NODE_ENV: 'staging'
+replicas: 1
 
 image:
-  name: andobaobab/ebanking-customer
+  name: andobaobab/consul
   tag: v1

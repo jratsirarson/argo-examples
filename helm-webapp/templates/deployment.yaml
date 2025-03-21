@@ -17,12 +17,7 @@ spec:
         tier: backend
     spec: # Pod spec
       containers:
-      - name: ebanking-customer
+      - name: registry
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
-        - containerPort: 3000
-        envFrom:
-        - configMapRef:
-            name: {{ .Values.configmap.name }}
-      imagePullSecrets:
-      - name: registryando
+        - containerPort: 8500
