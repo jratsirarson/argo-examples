@@ -10,3 +10,6 @@ data:
   DB_PASSWORD: 'npg_ckbSC0MDrn5z'
   DB_HOST: 'ep-purple-field-abstdy8v.eu-west-2.aws.neon.tech'
   DB_SSL_REQUIRE: 'true'
+  URL_COREAPI: 'https://uat-bbcoreapi.microcred.net'
+  AUTH_LOG_COREAPI: 'MatriXirtaM'
+  AUTH_PWD_COREAPI: 'Z1ON0101'
